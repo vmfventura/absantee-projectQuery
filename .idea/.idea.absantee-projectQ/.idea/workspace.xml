@@ -14,8 +14,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/WebApi.IntegrationTests/GlobalUsings.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApi.IntegrationTests/Helpers/Utilities.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApi.IntegrationTests/IntegrationTestsWebApplicationFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApi.IntegrationTests/Tests/SomeIntegrationTests.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/WebApi.IntegrationTests/WebApi.IntegrationTests.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/absantee-projectQ.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite-shm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/AbsanteeDB1.sqlite-wal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB2.sqlite" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB2.sqlite-shm" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/AbsanteeDB2.sqlite-shm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/AbsanteeDB2.sqlite-wal" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/AbsanteeDB2.sqlite-wal" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/absantee-projectQ.sln" beforeDir="false" afterPath="$PROJECT_DIR$/absantee-projectQ.sln" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,20 +77,15 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/0706dcfabddf4241b89dd5a90ab7061526a828/25/83766483/EntityEntry`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a4dad19c64a4f1a994732eaf2de348e228b0/c3/f91dd339/IServiceScopeFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a4dad19c64a4f1a994732eaf2de348e228b0/e7/ec4b9e36/ServiceProviderServiceExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Class1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Application/DTO/ProjectGatewayDTO.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Application/Services/ProjectAMQPService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Application/Services/ProjectAMQPService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Application/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/649f9a5315084d038b64e29ea11b1fb5b8a0/fb/9011c843/ConfigurationExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e95cebcad51d48f8b6a16982899ae0671b8b0/4e/01b6361b/WebApplicationBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/e95cebcad51d48f8b6a16982899ae0671b8b0/8b/efd0bffd/WebApplication.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Class1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gateway/Class1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Gateway/ProjectGateway.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Gateway/ProjectGateway.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/IRabbitMQConsumerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/ProjectController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/ProjectController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/RabbitMQConsumerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/IntegrationTests/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/IntegrationTests/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/IntegrationTests/absantee-projectQ/WebApi/Properties/launchSettings.json" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
   <component name="KubernetesApiProvider">{
@@ -81,7 +93,7 @@
 }</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -100,10 +112,12 @@
     &quot;.NET Launch Settings Profile.WebApi: https.executor&quot;: &quot;Debug&quot;,
     &quot;.NET Launch Settings Profile.WebApi: https1.executor&quot;: &quot;Debug&quot;,
     &quot;.NET Launch Settings Profile.WebApi: https2.executor&quot;: &quot;Debug&quot;,
+    &quot;2761ef30-5c13-4b5c-bc6b-7a4a69c9e40e.executor&quot;: &quot;Debug&quot;,
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.31563422&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vventura/academia/absantee-projectoCQ/IntegrationTests/absantee-projectQ&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -120,7 +134,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: https1">
+  <component name="RunManager" selected=".NET Launch Settings Profile.WebApi: https2">
     <configuration name="WebApi: IIS Express" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/WebApi/WebApi.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net8.0" />
@@ -266,6 +280,18 @@
       <workItem from="1714120160431" duration="260000" />
       <workItem from="1714388709217" duration="138000" />
       <workItem from="1714388929362" duration="2452000" />
+      <workItem from="1715069356914" duration="1203000" />
+      <workItem from="1715155967589" duration="761000" />
+      <workItem from="1715243009338" duration="2097000" />
+      <workItem from="1715328729602" duration="5571000" />
+      <workItem from="1715589591774" duration="4080000" />
+      <workItem from="1715674628718" duration="1652000" />
+      <workItem from="1716289274393" duration="3025000" />
+      <workItem from="1716390711722" duration="1571000" />
+      <workItem from="1716392492909" duration="2307000" />
+      <workItem from="1716396066580" duration="457000" />
+      <workItem from="1716453747403" duration="9745000" />
+      <workItem from="1716472796349" duration="1012000" />
     </task>
     <task id="LOCAL-00001" summary="project with DTO">
       <option name="closed" value="true" />

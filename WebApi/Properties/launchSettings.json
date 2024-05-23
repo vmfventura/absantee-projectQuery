@@ -14,6 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
+      "commandLineArgs": "replicaName=Repl1",
       "applicationUrl": "http://localhost:5186",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -24,6 +25,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
+      "commandLineArgs": "replicaName=Repl2",
       "applicationUrl": "http://localhost:5187",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -34,7 +36,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "commandLineArgs": "Repl1",
+      "commandLineArgs": "replicaName=Repl1",
       "applicationUrl": "https://localhost:7283;http://localhost:5186",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -45,7 +47,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "commandLineArgs": "Repl2",
+      "commandLineArgs": "replicaName=Repl2",
       "applicationUrl": "https://localhost:7284;http://localhost:5187",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

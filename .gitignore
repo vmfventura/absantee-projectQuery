@@ -3,3 +3,14 @@ obj/
 /packages/
 riderModule.iml
 /_ReSharper.Caches/
+WebApi/AbsanteeDB1.sqlite
+
+WebApi/AbsanteeDB1.sqlite-shm
+
+WebApi/AbsanteeDB1.sqlite-wal
+
+WebApi/AbsanteeDB2.sqlite
+
+WebApi/AbsanteeDB2.sqlite-shm
+
+WebApi/AbsanteeDB2.sqlite-wal

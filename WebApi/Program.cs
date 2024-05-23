@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-
 using Application.Services;
 using DataModel.Repository;
 using DataModel.Mapper;
@@ -11,9 +10,26 @@ using WebApi.Controllers;
 var builder = WebApplication.CreateBuilder(args);
 
 var config = builder.Configuration;
-var connectionString = config.GetConnectionString("AbsanteeDatabase" + args[0]);
-var projectQueueName = config["ProjectQueues:" + args[0]];
-var projectUpdateQueueName = config["ProjectUpdateQueues:" + args[0]];
+string replicaNameArg = Array.Find(args, arg => arg.Contains("replicaName"));
+string replicaName;
+
+if (replicaNameArg != null)
+{
+    replicaName = replicaNameArg.Split('=')[1];
+}
+else
+{
+    replicaName = config.GetConnectionString("replicaName") ?? "Repl1";
+}
+
+var connectionStringName = "AbsanteeDatabase" + replicaName;
+var connectionString = config.GetConnectionString(connectionStringName);
+
+var projectQueueNameConfig = "ProjectQueues:" + replicaName;
+var projectQueueName = config[projectQueueNameConfig] ?? "DefaultProjectQueue";
+
+var projectUpdateQueueNameConfig = "ProjectUpdateQueues:" + replicaName;
+var projectUpdateQueueName = config[projectUpdateQueueNameConfig] ?? "DefaultProjectUpdateQueue";
 
 builder.Services.AddControllers();
 
@@ -55,12 +71,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection(); 
-
+app.UseHttpsRedirection();
 app.UseRouting();
-
-app.UseCors("AllowAllOrigins"); 
-
+app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
 
 var rabbitMQConsumerService = app.Services.GetRequiredService<IRabbitMQConsumerController>();
@@ -72,5 +85,7 @@ rabbitMQConsumerUpdateService.ConfigQueue(projectUpdateQueueName);
 rabbitMQConsumerUpdateService.StartConsuming();
 
 app.MapControllers();
-
 app.Run();
+
+// Partial class for testing purposes
+public partial class Program { }
