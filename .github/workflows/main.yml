@@ -65,10 +65,10 @@ jobs:
 #            ${{ runner.os }}-nuget-
 #
 #      - name: Restore dependencies
-#        run: dotnet restore AssociationQ.sln
+#        run: dotnet restore absantee-projectQ.sln
 #
 #      - name: Run Integration Tests
-#        run: dotnet test AssociationQ.sln --no-build --filter FullyQualifiedName~IntegrationTests --configuration Release
+#        run: dotnet test absantee-projectQ.sln --no-build --filter FullyQualifiedName~IntegrationTests --configuration Release
 #
 #      - name: Upload Integration Test Results
 #        uses: actions/upload-artifact@v3
