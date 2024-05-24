@@ -5,6 +5,7 @@ using DataModel.Mapper;
 using Domain.Factory;
 using Domain.IRepository;
 using Gateway;
+using RabbitMQ.Client;
 using WebApi.Controllers;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -31,6 +32,8 @@ var projectQueueName = config[projectQueueNameConfig] ?? "DefaultProjectQueue";
 var projectUpdateQueueNameConfig = "ProjectUpdateQueues:" + replicaName;
 var projectUpdateQueueName = config[projectUpdateQueueNameConfig] ?? "DefaultProjectUpdateQueue";
 
+builder.Services.AddSingleton<IConnectionFactory>(new ConnectionFactory() { Uri = new Uri("amqp://guest:guest@localhost:5672") });
+
 builder.Services.AddControllers();
 
 builder.Services.AddCors(options =>
@@ -55,8 +58,8 @@ builder.Services.AddTransient<IProjectRepository, ProjectRepository>();
 builder.Services.AddTransient<IProjectFactory, ProjectFactory>();
 builder.Services.AddTransient<ProjectMapper>();
 builder.Services.AddTransient<ProjectService>();
-builder.Services.AddTransient<ProjectGatewayUpdate>();
-builder.Services.AddTransient<ProjectGateway>();
+builder.Services.AddTransient<IMessagePublisher, ProjectGateway>();
+builder.Services.AddTransient<IMessageUpdatePublisher, ProjectGatewayUpdate>();
 
 builder.Services.AddScoped<ProjectService>();
 
@@ -75,6 +78,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors("AllowAllOrigins");
 app.UseAuthorization();
+
 
 var rabbitMQConsumerService = app.Services.GetRequiredService<IRabbitMQConsumerController>();
 rabbitMQConsumerService.ConfigQueue(projectQueueName);

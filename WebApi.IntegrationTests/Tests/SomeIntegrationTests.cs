@@ -6,24 +6,29 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using WebApi.IntegrationTests.Fixtures;
 using WebApi.IntegrationTests.Helpers;
 using Xunit;
 using Xunit.Abstractions;
 
 namespace WebApi.IntegrationTests;
 
-public class SomeIntegrationTests : IClassFixture<IntegrationTestsWebApplicationFactory<Program>>
+public class SomeIntegrationTests : IClassFixture<IntegrationTestsWebApplicationFactory<Program>>, IClassFixture<RabbitMqFixture>
 {
     private readonly IntegrationTestsWebApplicationFactory<Program> _factory;
     private readonly HttpClient _client;
     private readonly ITestOutputHelper _output;
+    private readonly RabbitMqFixture _rabbitMqFixture;
 
-    public SomeIntegrationTests(IntegrationTestsWebApplicationFactory<Program> factory, ITestOutputHelper output)
+    public SomeIntegrationTests(IntegrationTestsWebApplicationFactory<Program> factory, RabbitMqFixture rabbitMqFixture, ITestOutputHelper output)
     {
-        _output = output;
         _factory = factory;
+        _rabbitMqFixture = rabbitMqFixture;
+        _output = output;
+
+        _factory.RabbitMqConnectionString = _rabbitMqFixture.GetConnectionString();
         Environment.SetEnvironmentVariable("Arg", "Repl1");  // Ensure this is set before creating the client
-        _client = factory.CreateClient(new WebApplicationFactoryClientOptions
+        _client = _factory.CreateClient(new WebApplicationFactoryClientOptions
         {
             AllowAutoRedirect = false
         });

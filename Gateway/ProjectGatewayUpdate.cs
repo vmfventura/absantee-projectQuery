@@ -3,12 +3,12 @@ using System.Text;
 
 namespace Gateway;
 
-public class ProjectGatewayUpdate
+public class ProjectGatewayUpdate : IMessageUpdatePublisher
 {
     private IConnection _connection;
     private IModel _channel;
     private string nameExchange;
-    
+
     public ProjectGatewayUpdate()
     {
         var factory = new ConnectionFactory { HostName = "localhost" };
@@ -28,5 +28,5 @@ public class ProjectGatewayUpdate
         Console.WriteLine($" [x] Sent {args}");
 
     }
-    
+
 }

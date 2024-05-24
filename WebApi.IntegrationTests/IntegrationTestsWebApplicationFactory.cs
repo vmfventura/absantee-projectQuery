@@ -4,28 +4,15 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using WebApi.Controllers;
 
 namespace WebApi.IntegrationTests;
 
 public class IntegrationTestsWebApplicationFactory<TProgram> : WebApplicationFactory<TProgram> where TProgram : class
 {
+    public string RabbitMqConnectionString { get; set; }
     protected override void ConfigureWebHost(IWebHostBuilder builder)
     {
-        builder.ConfigureAppConfiguration((context, confBuilder) =>
-        {
-            // Set up the configuration to read from the command line or environment variable
-            var environmentVariableArg = Environment.GetEnvironmentVariable("Arg");
-            if (string.IsNullOrEmpty(environmentVariableArg))
-            {
-                throw new ArgumentNullException(nameof(environmentVariableArg), "Environment variable 'Arg' cannot be null or empty.");
-            }
-
-            var args = new string[] { environmentVariableArg };
-            confBuilder.AddCommandLine(args);
-        });
 
         builder.ConfigureServices((context, services) =>
         {
@@ -61,9 +48,6 @@ public class IntegrationTestsWebApplicationFactory<TProgram> : WebApplicationFac
                 options.UseSqlite(connection);
             });
 
-            // Register required RabbitMQ services
-            // services.AddSingleton<IRabbitMQConsumerController, RabbitMQConsumerController>();
-            // services.AddSingleton<IRabbitMQConsumerUpdateController, RabbitMQConsumerUpdateController>();
         });
 
         builder.UseSetting("launchProfile", "https1");
