@@ -32,7 +32,19 @@ var projectQueueName = config[projectQueueNameConfig] ?? "DefaultProjectQueue";
 var projectUpdateQueueNameConfig = "ProjectUpdateQueues:" + replicaName;
 var projectUpdateQueueName = config[projectUpdateQueueNameConfig] ?? "DefaultProjectUpdateQueue";
 
-builder.Services.AddSingleton<IConnectionFactory>(new ConnectionFactory() { Uri = new Uri("amqp://guest:guest@localhost:5672") });
+var rabbitMqHost = config["RabbitMq:Host"];
+var rabbitMqPort = config["RabbitMq:Port"];
+var rabbitMqUser = config["RabbitMq:UserName"];
+var rabbitMqPass = config["RabbitMq:Password"];
+
+builder.Services.AddSingleton<IConnectionFactory>(
+    new ConnectionFactory()
+    {
+        HostName = rabbitMqHost,
+        Port = int.Parse(rabbitMqPort),
+        UserName = rabbitMqUser,
+        Password = rabbitMqPass
+    });
 
 builder.Services.AddControllers();
 
