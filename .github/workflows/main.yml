@@ -6,7 +6,7 @@ on:
       - '**'
 
 jobs:
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -32,6 +32,28 @@ jobs:
       - name: Build
         run: dotnet build absantee-projectQ.sln --no-restore --configuration Release
 
+  domain-tests:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up .NET Core SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Cache .NET packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
       - name: Run Unit Tests
         run: dotnet test absantee-projectQ.sln --filter FullyQualifiedName~Domain.Tests --configuration Release
 
@@ -41,39 +63,39 @@ jobs:
           name: test-results
           path: test-results/
 
-# Uncomment and modify the following block to add the integration test step
-#  integration-tests:
-#    runs-on: ubuntu-latest
-#
-#    needs: build
-#
-#    steps:
-#      - name: Checkout repository
-#        uses: actions/checkout@v3
-#
-#      - name: Set up .NET Core SDK
-#        uses: actions/setup-dotnet@v3
-#        with:
-#          dotnet-version: '8.0.x'
-#
-#      - name: Cache .NET packages
-#        uses: actions/cache@v3
-#        with:
-#          path: ~/.nuget/packages
-#          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
-#          restore-keys: |
-#            ${{ runner.os }}-nuget-
-#
-#      - name: Restore dependencies
-#        run: dotnet restore absantee-projectQ.sln
-#
-#      - name: Run Integration Tests
-#        run: dotnet test absantee-projectQ.sln --no-build --filter FullyQualifiedName~IntegrationTests --configuration Release
-#
-#      - name: Upload Integration Test Results
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: integration-test-results
-#          path: test-results/
+  # Uncomment and modify the following block to add the integration test step
+  integration-tests:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up .NET Core SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Cache .NET packages
+        uses: actions/cache@v3
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      - name: Restore dependencies
+        run: dotnet restore absantee-projectQ.sln
+
+      - name: Run Integration Tests
+        run: dotnet test absantee-projectQ.sln --filter FullyQualifiedName~WebApi.IntegrationTests --configuration Release
+
+      - name: Upload Integration Test Results
+        uses: actions/upload-artifact@v3
+        with:
+          name: integration-test-results
+          path: test-results/
 
 
