@@ -1,14 +1,9 @@
-using System.Text;
-using Application.DTO;
 using DataModel.Repository;
-using Domain.Model;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using WebApi.IntegrationTests.Fixtures;
 using WebApi.IntegrationTests.Helpers;
-using Xunit;
 using Xunit.Abstractions;
 
 namespace WebApi.IntegrationTests;

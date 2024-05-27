@@ -13,11 +13,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/appsettings.Development.json" afterDir="false" />
-    </list>
+    <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,6 +80,8 @@
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
@@ -293,7 +291,7 @@
       <workItem from="1716453747403" duration="9745000" />
       <workItem from="1716472796349" duration="7149000" />
       <workItem from="1716539557534" duration="9609000" />
-      <workItem from="1716555994501" duration="5050000" />
+      <workItem from="1716555994501" duration="6159000" />
     </task>
     <task id="LOCAL-00001" summary="project with DTO">
       <option name="closed" value="true" />

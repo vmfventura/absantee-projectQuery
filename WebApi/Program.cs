@@ -23,14 +23,16 @@ else
     replicaName = config.GetConnectionString("replicaName") ?? "Repl1";
 }
 
-var connectionStringName = "AbsanteeDatabase" + replicaName;
-var connectionString = config.GetConnectionString(connectionStringName);
+// var connectionStringName = "AbsanteeDatabase" + replicaName;
+// var connectionString = config.GetConnectionString(connectionStringName);
 
 var projectQueueNameConfig = "ProjectQueues:" + replicaName;
 var projectQueueName = config[projectQueueNameConfig] ?? "DefaultProjectQueue";
 
 var projectUpdateQueueNameConfig = "ProjectUpdateQueues:" + replicaName;
 var projectUpdateQueueName = config[projectUpdateQueueNameConfig] ?? "DefaultProjectUpdateQueue";
+
+var connectionString = config.GetConnectionString("DBConnectionString");
 
 var rabbitMqHost = config["RabbitMq:Host"];
 var rabbitMqPort = config["RabbitMq:Port"];
@@ -59,9 +61,20 @@ builder.Services.AddCors(options =>
         });
 });
 
-builder.Services.AddDbContext<AbsanteeContext>(opt =>
-    opt.UseSqlite(connectionString)
-);
+// builder.Services.AddDbContext<AbsanteeContext>(opt =>
+//     opt.UseSqlite(connectionString)
+// );
+
+builder.Services.AddDbContext<AbsanteeContext>(option =>
+{
+    option.UseNpgsql(connectionString);
+}, optionsLifetime: ServiceLifetime.Singleton);
+
+
+builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
