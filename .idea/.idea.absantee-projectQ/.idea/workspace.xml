@@ -13,7 +13,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="" />
+    <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,25 +68,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/295b2b6f1052c9b89394dcbfb839f34b4eae48ff5563dc5320b1b2f1f0eb40/RabbitMqContainer.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/79e4164404d2be7b9d0cd51036b545bd14f5807c558d20f7cd375d4fd8ff23/ConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/8beeca286b1d38974e9e9d1e61c9434beb5d2838f7bf21ac3117e2b7a4c76f2/IConnectionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Application/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Application/Services/ProjectService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Domain/Class1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Gateway/Class1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Gateway/ProjectGateway.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/Gateway/ProjectGatewayUpdate.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi.IntegrationTests/IntegrationTestsWebApplicationFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi.IntegrationTests/IntegrationTestsWebApplicationFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi.IntegrationTests/Tests/SomeIntegrationTests.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/RabbitMQConsumerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Controllers/RabbitMQConsumerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/vventura/academia/absantee-projectoCQ/absantee-projectQ/WebApi/appsettings.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/package-lock.json" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="KubernetesApiPersistence">{}</component>
@@ -292,6 +279,7 @@
       <workItem from="1716472796349" duration="7149000" />
       <workItem from="1716539557534" duration="9609000" />
       <workItem from="1716555994501" duration="6159000" />
+      <workItem from="1716820207630" duration="2668000" />
     </task>
     <task id="LOCAL-00001" summary="project with DTO">
       <option name="closed" value="true" />

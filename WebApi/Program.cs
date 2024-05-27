@@ -68,13 +68,13 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<AbsanteeContext>(option =>
 {
     option.UseNpgsql(connectionString);
-}, optionsLifetime: ServiceLifetime.Singleton);
+}, optionsLifetime: ServiceLifetime.Scoped);
 
 
-builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
-{
-    options.UseNpgsql(connectionString);
-});
+// builder.Services.AddDbContextFactory<AbsanteeContext>(options =>
+// {
+//     options.UseNpgsql(connectionString);
+// });
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
