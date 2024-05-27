@@ -15,7 +15,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4914d486-d6cd-40ae-9010-7dfbc49334ce" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.absantee-projectQ/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WebApi/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebApi/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/WebApi/appsettings.Development.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,7 +279,7 @@
       <workItem from="1716472796349" duration="7149000" />
       <workItem from="1716539557534" duration="9609000" />
       <workItem from="1716555994501" duration="6159000" />
-      <workItem from="1716820207630" duration="2668000" />
+      <workItem from="1716820207630" duration="6006000" />
     </task>
     <task id="LOCAL-00001" summary="project with DTO">
       <option name="closed" value="true" />
